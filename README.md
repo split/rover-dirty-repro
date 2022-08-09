@@ -34,7 +34,7 @@ View full details at https://studio.apollographql.com/graph/...
 ## Steps used to test the issue
 
 1. Installed rover and apollo `npm i -E @apollo/rover @apollo/subgraph apollo-server graphql`
-2. Copied [example](https://www.apollographql.com/docs/federation/v1/subgraphs#combined-example) from documentation to `server.js`
+2. Copied [example](https://www.apollographql.com/docs/federation/v1/subgraphs#combined-example) from documentation to `server.js` and started it with `node server.js`
 3. Introspected schema with `rover subgraph introspect http://localhost:4001 > schema.graphql`
 4. Created new supergraph to Apollo Studio and copied `APOLLO_KEY` and new graph ref
 5. Executed `APOLLO_KEY=service:testing-... yarn run publish $GRAPH_REF@current` to publish the subgraph
