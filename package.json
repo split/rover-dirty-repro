@@ -1,0 +1,16 @@
+{
+  "name": "rover-dirty-repro",
+  "version": "0.0.1",
+  "main": "server.js",
+  "dependencies": {
+    "@apollo/rover": "0.8.1",
+    "@apollo/subgraph": "2.0.5",
+    "apollo-server": "3.10.0",
+    "graphql": "16.5.0"
+  },
+  "scripts": {
+    "introspect": "rover subgraph introspect http://localhost:4001 > schema.graphql",
+    "check": "rover subgraph check --name user --schema schema.graphql",
+    "publish": "rover subgraph publish --name user --schema schema.graphql --routing-url http://localhost:4001"
+  }
+}
